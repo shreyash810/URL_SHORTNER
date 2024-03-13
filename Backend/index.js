@@ -5,6 +5,7 @@ const Urlrout = require("./routes/url");
 const URL = require("./model/url");
 const UserRouter = require("./routes/user");
 require("dotenv").config();
+const path = require("path");
 
 const cors = require("cors");
 const cookieparser = require("cookie-parser");
@@ -31,6 +32,11 @@ app.use(
 
 app.use("/", Urlrout);
 app.use("/", UserRouter);
+
+app.get("/", (req, res) => {
+  app.use(express.static(path.resolve(__dirname, "client", "build")));
+  res.sendFile(path.resolve(__dirname, "client","build","index.html"));
+});
 
 app.use("/:shortid", async (req, res) => {
   const shortId = req.params.shortid;
