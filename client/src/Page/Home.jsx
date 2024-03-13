@@ -23,7 +23,6 @@ function Home() {
     <div>
       <Hero />
       <Table handelDelete={handelDelete} />
-      {""}
     </div>
   );
 }
