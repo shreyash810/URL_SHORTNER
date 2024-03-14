@@ -4,7 +4,6 @@ import { useState } from "react";
 import DataTable from "react-data-table-component";
 import customstyle from "./CustomeStyle";
 import axios from "axios";
-import imgs from "../../../assets/imgs.png";
 import Popup from "reactjs-popup";
 import Cookies from "js-cookie";
 
@@ -147,46 +146,37 @@ function Table({ handelDelete }) {
 
   return (
     <>
-      {data ? (
-        <div className="p-5 mt-10 w-full cursor-pointer">
-          <DataTable
-            columns={coloum}
-            data={data}
-            customStyles={customstyle}
-          ></DataTable>
-          <Popup open={open} closeOnDocumentClick onClose={closePopup}>
-            <div className="cursor-pointer bg-white rounded mt-[10vw]  w-[20vw] h-[15vw]">
-              <div className="flex justify-between ">
-                <h1 className="p-2 font-bold">QRCODE</h1>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-10 h-10 text-indigo-500 p-2"
-                  onClick={closePopup}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-
-              <div className="model text-white  rounded  flex justify-center items-center">
-                <img src={qrcode} />
-              </div>
+      <div className="p-5 mt-10 w-full cursor-pointer">
+        <DataTable
+          columns={coloum}
+          data={data}
+          customStyles={customstyle}
+        ></DataTable>
+        <Popup open={open} closeOnDocumentClick onClose={closePopup}>
+          <div className="cursor-pointer bg-white rounded mt-[10vw]  w-[20vw] h-[15vw]">
+            <div className="flex justify-between ">
+              <h1 className="p-2 font-bold">QRCODE</h1>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-10 h-10 text-indigo-500 p-2"
+                onClick={closePopup}
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
-          </Popup>
-        </div>
-      ) : (
-        <div className="w-full flex p-2 justify-between items-center max-md:flex-col">
-          <img className="w-1/2 " src={imgs} />
-          <h1 className="text-white  max-md:text-xl max-md:w-full max-md:text-center items-center w-1/2 text-2xl">
-            Login To Check Analytics
-          </h1>
-        </div>
-      )}
+
+            <div className="model text-white  rounded  flex justify-center items-center">
+              <img src={qrcode} />
+            </div>
+          </div>
+        </Popup>
+      </div>
     </>
   );
 }
