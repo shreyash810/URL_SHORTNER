@@ -10,7 +10,10 @@ function Home() {
     };
 
     axios
-      .post(`http://localhost:8000/delete/${id}`, config)
+      .post(
+        `url-shortnerapi-f1hst2ou8-sams-projects-daccedfc.vercel.app/delete/${id}`,
+        config
+      )
       .then((response) => {
         console.log(response.data.msg);
       })

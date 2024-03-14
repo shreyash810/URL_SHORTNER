@@ -11,7 +11,10 @@ function Navbar({ islogout, setlogout }) {
       withCredentials: true,
     };
     try {
-      const res = await axios.post("http://localhost:8000/logout", config);
+      const res = await axios.post(
+        "url-shortnerapi-f1hst2ou8-sams-projects-daccedfc.vercel.app/logout",
+        config
+      );
       if (res) {
         localStorage.removeItem("token");
         document.cookie = "uuid=; Max-Age=-99999999;";
