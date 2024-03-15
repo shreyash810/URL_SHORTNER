@@ -23,7 +23,7 @@ function Hero() {
     };
     try {
       const res = await axios.post(
-        "/https://url-shortnerapi-opal.vercel.app/url",
+        "https://url-shortnerapi-opal.vercel.app/url",
         { url: url },
         config
       );
