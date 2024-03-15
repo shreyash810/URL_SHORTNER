@@ -12,7 +12,7 @@ function Navbar({ islogout, setlogout }) {
     };
     try {
       const res = await axios.post(
-        "url-shortnerapi-f1hst2ou8-sams-projects-daccedfc.vercel.app/logout",
+        "https://url-shortnerapi-opal.vercel.app/logout",
         config
       );
       if (res) {

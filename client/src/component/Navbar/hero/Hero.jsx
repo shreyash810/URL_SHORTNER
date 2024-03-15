@@ -23,7 +23,7 @@ function Hero() {
     };
     try {
       const res = await axios.post(
-        "url-shortnerapi-f1hst2ou8-sams-projects-daccedfc.vercel.app/url",
+        "/https://url-shortnerapi-opal.vercel.app/url",
         { url: url },
         config
       );
@@ -101,7 +101,7 @@ function Hero() {
           </div>
           <div className="model w-full mt-5 text-black rounded  flex justify-center items-center">
             {id ? (
-              <span>http://localhost:8000/{id}</span>
+              <span>https://url-shortners-two.vercel.app/{id}</span>
             ) : (
               <div role="status">
                 <svg
