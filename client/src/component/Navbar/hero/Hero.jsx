@@ -82,7 +82,7 @@ function Hero() {
         </button>
       </div>
       <Popup open={open} closeOnDocumentClick onClose={closePopup}>
-        <div className="cursor-pointer bg-white rounded mt-[10vw]  w-[15vw] h-[10vw]">
+        <div className="cursor-pointer bg-white rounded mt-[10vw]  w-[30vw] h-[10vw]">
           <div className="flex justify-between  items-center">
             <h1 className="p-2 font-bold">Your Url</h1>
             <svg
