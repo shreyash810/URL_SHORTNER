@@ -40,7 +40,7 @@ function Table({ handelDelete }) {
     };
     async function fetchall() {
       axios
-        .get("https://url-shortnerapi-opal.vercel.app/all", config)
+        .get("https://url-shortnerapi-nwehdcpt4-sams-projects-daccedfc.vercel.app/all", config)
         .then((response) => {
           setData(response.data.Data);
         })
