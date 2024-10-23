@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cookieparser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["url-shortners-jiswk4zor-sams-projects-daccedfc.vercel.app"],
     credentials: true,
     sameSite: "none",
   })
