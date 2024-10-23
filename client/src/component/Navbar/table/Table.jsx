@@ -20,7 +20,7 @@ function Table({ handelDelete }) {
 
   // Function to toggle between truncated and full text
 
-  const toggleRow = (rowId) => {
+  const toggleRow = (rowId) => 
     const isRowExpanded = expandedRow.includes(rowId);
 
     if (isRowExpanded) {
@@ -40,7 +40,7 @@ function Table({ handelDelete }) {
     };
     async function fetchall() {
       axios
-        .get("https://url-shortnerapi-nwehdcpt4-sams-projects-daccedfc.vercel.app/all", config)
+        .get("https://url-shortnerapi-git-main-sams-projects-daccedfc.vercel.app/all", config)
         .then((response) => {
           setData(response.data.Data);
         })
