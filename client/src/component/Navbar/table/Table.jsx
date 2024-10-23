@@ -43,6 +43,7 @@ function Table({ handelDelete }) {
         .get("https://url-shortnerapi-git-main-sams-projects-daccedfc.vercel.app/all", config)
         .then((response) => {
           setData(response.data.Data);
+           console.log(response);
         })
         .catch((e) => {
           if (e.response.data.msg === "token exp") {
