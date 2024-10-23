@@ -54,7 +54,7 @@ function Table({ handelDelete }) {
     fetchall();
   }, [data, handelDelete]);
 
-    console.log(data);
+    console.log("hello");
   const coloum = [
     {
       name: "Short Link",
