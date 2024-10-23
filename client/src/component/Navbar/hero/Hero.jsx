@@ -101,7 +101,7 @@ function Hero() {
           </div>
           <div className="model w-full mt-5 text-black rounded  flex justify-center items-center">
             {id ? (
-              <span>https://url-shortnerapi-opal.vercel.app/{id}</span>
+              <span>https://url-shortnerapi/{id}</span>
             ) : (
               <div role="status">
                 <svg
